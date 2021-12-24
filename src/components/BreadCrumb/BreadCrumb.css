@@ -1,0 +1,17 @@
+.breadcrumb {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: #ecf2f8;
+    padding-left: 7%;
+    text-align: center;
+}
+
+.bread {
+    font-size: 18px;
+}
+
+.crumb {
+    font-size: 18px;
+    color: #000;
+}

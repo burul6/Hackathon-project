@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes } from "react-router-dom";
 
-function App() {
+import AuthContextProvider from "./contexts/authContext";
+import ProductsContextProvider from "./contexts/productsContext";
+
+import BreadCrumb from "./components/BreadCrumb/BreadCrumb";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+import Routing from "./Routing";
+
+import 'antd/dist/antd.css';
+import "./App.css";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AuthContextProvider>
+      <ProductsContextProvider>
+      <BrowserRouter>
+          {/* <BreadCrumb /> */}
+          {/* <Header /> */}
+          <Routing />
+          <Footer />
+      </BrowserRouter>
+      </ProductsContextProvider>
+      </AuthContextProvider>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,33 @@
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card {
+    width: 335px;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card img {
+    width: 310px;
+    height: 350px;
+}
+
+.product-card h4 {
+    font-size: 15px;
+    text-align: center;
+}
+
+.product-card h4:hover {
+    color: #b4b4b4;
+}
+
+.product-card button {
+    font-size: 13px;
+    padding: 5px 15px;
+    color: #fff;
+    background-color: #000;
+}

@@ -1,0 +1,160 @@
+.login {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    background: #d3e3f3;
+    padding-right: 10%;
+}
+
+
+  .login-container {
+    padding: 50px;
+    margin: auto;
+    margin-left: 150px;
+    min-height: 500px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #4a4a4a;
+    background-color: whitesmoke;
+  }
+  
+  .auth-btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #fff;
+    background: rgb(175, 138, 134);
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+  
+  .auth-btn:hover {
+      font-size: 16px;
+      border: 1px solid #000;
+      background-color: #000;
+      color: #d1e4f7;
+  }
+
+  .auth-input {
+    width: 100%;
+    border: 1px solid #000;
+    outline: none;
+    font-size: 18px;
+    padding: 10px;
+    letter-spacing: 2px;
+    background-color: transparent;
+  }
+  
+  .btn-container {
+    width: 100%;
+    padding: 24px 0;
+  }
+  
+  .error-msg {
+    color: red;
+    font-size: 15px;
+  }
+  
+  .auth-text {
+    margin: 14px 0 0 0;
+    text-align: right;
+  }
+  
+  .auth-span {
+    color: #51a8ff;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 400ms ease-in-out;
+  }
+  
+
+.left-part-images {
+    display: flex;
+}
+
+#chair {
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+    width: 540px;
+    height: 350px;
+}
+
+#waze {
+    margin: 150px 0 0 200px;
+    width: 280px;
+    height: 600px;
+}
+
+@-webkit-keyframes fadeinLeft {
+    from {
+        opacity:0;
+        -webkit-transform: translatex(-10px);
+        -moz-transform: translatex(-10px);
+        -o-transform: translatex(-10px);
+        transform: translatex(-10px);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+@-moz-keyframes fadeInLeft {
+    from {
+        opacity:0;
+        -webkit-transform: translatex(-10px);
+        -moz-transform: translatex(-10px);
+        -o-transform: translatex(-10px);
+        transform: translatex(-10px);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity:0;
+        -webkit-transform: translatex(-100px);
+        -moz-transform: translatex(-100px);
+        -o-transform: translatex(-100px);
+        transform: translatex(-100px);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+.left-part-images  {
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-duration:1s;
+    animation-delay: 1s;
+}
+

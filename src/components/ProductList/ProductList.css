@@ -1,0 +1,13 @@
+.products-search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    /* padding: 8%; */
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+}
