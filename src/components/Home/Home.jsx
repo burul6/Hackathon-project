@@ -16,7 +16,16 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-      <div className="main__banner" style={{background: "url(https://arredo.qodeinteractive.com/wp-content/uploads/2018/05/main-slider-img-1.jpg) no-repeat center center", width: "100%", height: "720px", backgroundSize: "cover"}}>
+      <div
+        className="main__banner"
+        style={{
+          background:
+            "url(https://arredo.qodeinteractive.com/wp-content/uploads/2018/05/main-slider-img-1.jpg) no-repeat center center",
+          width: "100%",
+          height: "720px",
+          backgroundSize: "cover",
+        }}
+      >
         <Header />
         <div className="main__text">
           <h1>Shop and fun</h1>
@@ -250,7 +259,6 @@ const Home = () => {
             <a href="">{"-"} Read More</a>
           </div>
         </section>
-
       </div>
     </div>
   );

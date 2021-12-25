@@ -10,6 +10,7 @@ import Home from "./components/Home/Home";
 import ProductList from "./components/ProductList/ProductList";
 import AdminPage from "./components/AdminPage/AdminPage";
 import EditProduct from "./components/EditProduct/EditProduct";
+import ProductCart from "./components/Cart/ProductCart";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -33,7 +34,11 @@ const Routing = () => {
       element: <Auth />,
       id: 4,
     },
-
+    {
+      link: "/cart",
+      element: <ProductCart /> ,
+      id: 5,
+    },
   ];
 
   const ADMIN_ROUTES = [

@@ -2,10 +2,11 @@ import React, { useContext, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { useAuth } from "../../contexts/authContext";
+import { cartContext } from "../../contexts/cartContext";
+
 
 import { Badge, Menu, Dropdown } from "antd";
 import {
-  SearchOutlined,
   ShoppingOutlined,
   HeartOutlined,
   MenuOutlined,
@@ -19,6 +20,11 @@ const Header = () => {
     handleLogout,
     user: { email },
   } = useAuth();
+
+  const { getCart, cartLenght } = useContext(cartContext);
+  useEffect(() => {
+    getCart()
+  }, []);
 
   const menu = (
     <Menu>
@@ -73,7 +79,7 @@ const Header = () => {
 
         <div className="nav__icons">
           <Link to="/cart">
-            <Badge count={5} size={"small"}>
+            <Badge count={+cartLenght} size={"small"}>
               <ShoppingOutlined
                 style={{ color: "#fff", paddingLeft: "15px", fontSize: "25px" }}
               />

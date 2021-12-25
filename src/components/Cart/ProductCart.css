@@ -1,0 +1,64 @@
+.cart-banner h1 {
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    padding-top: 130px;
+    animation-name: moveInleft;
+    animation-duration: 3s;
+}
+
+.product-titles {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 20%; */
+}
+
+.product-titles h3 {
+    padding: 50px 0 0 0px;
+    color: #282828;
+    text-align: left;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.product-name {
+    margin-left: 22%;
+}
+
+.product-price {
+    margin-right: 4%; 
+}
+
+.product-total {
+    margin-right: 11%;
+}
+
+.product-quantity {
+    margin-right: 3%;
+}
+
+.cart-total {
+    padding: 3% 8%;
+}
+
+.cart-total h3 {
+    font-size: 25px;
+}
+
+.cart-total span {
+    margin-left: 100px;
+    font-weight: 600;
+}
+
+.cart-total button {
+    margin-top: 25px;
+    color: #fff;
+    background-color: #282828;
+}
+
+.cart-total button:hover {
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #282828;
+}

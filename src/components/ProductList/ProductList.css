@@ -1,13 +1,45 @@
 .products-search {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5vw;
 }
 
+.sort {
+    margin-left: -600px;
+}
 .container {
-    /* padding: 8%; */
+    padding: 6%;
 }
 
 .products-list {
     display: flex;
     flex-wrap: wrap;
+}
+
+.sidebar h5 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    font-size: 12px;
+    margin: 7px 0;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    color: #b1b1b1;
+}
+
+#shop-mini-image {
+    margin: 40px 0 45px 0;
+}
+
+.shop-list {
+    display: flex;
 }

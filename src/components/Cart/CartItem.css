@@ -1,0 +1,31 @@
+.cart {
+    padding: 50px;
+}
+
+.cart-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+}
+
+.cart-list h5 {
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #939393;
+    margin-left: -180px;
+}
+
+.cart-list span {
+    margin-right: 35px;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #939393;
+}
+
+.cart-list img {
+    margin-left: -100px;
+}
+
