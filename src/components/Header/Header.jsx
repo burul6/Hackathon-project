@@ -3,11 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 
 import { useAuth } from "../../contexts/authContext";
 
-import { Badge } from "antd";
+import { Badge, Menu, Dropdown } from "antd";
 import {
   SearchOutlined,
   ShoppingOutlined,
   HeartOutlined,
+  MenuOutlined,
 } from "@ant-design/icons";
 
 import "./Header.css";
@@ -18,6 +19,23 @@ const Header = () => {
     handleLogout,
     user: { email },
   } = useAuth();
+
+  const menu = (
+    <Menu>
+      <Menu.Item key="0">
+        <Link to="/">Home</Link>
+      </Menu.Item>
+      <Menu.Item key="1">
+        <Link to="/new">New</Link>
+      </Menu.Item>
+      <Menu.Item key="2">
+        <Link to="/shop">Shop</Link>
+      </Menu.Item>
+      <Menu.Item key="3">
+        <Link to="/contacts">Contacts</Link>
+      </Menu.Item>
+    </Menu>
+  );
 
   return (
     <div className="header">
@@ -46,9 +64,7 @@ const Header = () => {
           <Link
             to="/admin"
             className={
-              location.pathname === "/admin"
-                ? "nav__item-active"
-                : "nav__item"
+              location.pathname === "/admin" ? "nav__item-active" : "nav__item"
             }
           >
             ADMIN
@@ -56,33 +72,43 @@ const Header = () => {
         ) : null}
 
         <div className="nav__icons">
-          <Link to="/search">
-            <SearchOutlined style={{ color: "#fff", padding:  "0 15px" }} />
-          </Link>
           <Link to="/cart">
             <Badge count={5} size={"small"}>
-              <ShoppingOutlined style={{ color: "#fff", paddingLeft:  "15px", fontSize: "25px"}} />
+              <ShoppingOutlined
+                style={{ color: "#fff", paddingLeft: "15px", fontSize: "25px" }}
+              />
             </Badge>
           </Link>
           <Link to="/favorite">
-            <HeartOutlined style={{ color: "#fff", paddingLeft:  "30px" }} />
+            <Badge count={5} size={"small"}>
+              <HeartOutlined
+                style={{ color: "#fff", paddingLeft: "30px", fontSize: "25px" }}
+              />
+            </Badge>
           </Link>
         </div>
 
         {email ? (
-            <Link to="/auth">
-              <button className="sign-btn" onClick={handleLogout}>
-                Logout
-              </button>
-            </Link>
-          ) : null}
+          <Link to="/auth">
+            <button className="sign-btn" onClick={handleLogout}>
+              Logout
+            </button>
+          </Link>
+        ) : null}
 
-          {email ? null : (
-            <Link to="/auth">
-              <button className="sign-btn">Login</button>
-            </Link>
-          )}
+        {email ? null : (
+          <Link to="/auth">
+            <button className="sign-btn">Login</button>
+          </Link>
+        )}
 
+        <Dropdown overlay={menu} trigger={["click"]}>
+          <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
+            <MenuOutlined
+              style={{ color: "#fff", fontSize: "23px", marginLeft: "20px" }}
+            />
+          </a>
+        </Dropdown>
       </ul>
     </div>
   );

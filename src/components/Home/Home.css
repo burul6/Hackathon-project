@@ -27,7 +27,7 @@
     color: rgb(255, 255, 255);
 }
 
-.main__text p{
+.main__text p {
     font-size: 17px;
     line-height: 28px;
     font-weight: 300;
@@ -340,7 +340,6 @@ button:hover {
 
 
 
-
 .features {
     display: flex;
     justify-content: space-between;
@@ -432,4 +431,239 @@ button:hover {
     height: 250px;
     text-align: center;
     background: #ecf2f8;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    .week__products {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+    
+    
+    .post-images {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .week__products {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .week__product img{
+        width: 235px;
+        height: 290px;
+    }
+    
+    .square-background {
+        width: 290px;
+        height: 417px;
+        margin-left: 12%;
+    }
+
+    #green-chair {
+        width: 263px;
+        height: 388px;
+    }
+
+    #egg {
+        width: 185px;
+        height: 165px;
+    }
+
+    .right-part {
+        width: 50%;
+        text-align: center;
+        padding: 90px 3% 0px;
+    }
+
+    #black-lamp {
+        width: 265px;
+        height: 355px;
+    }
+
+    #mesh-chair {
+        width: 185px;
+        height: 175px;
+    }
+
+    .second-right-part {
+        padding: 90px 0px 0px 70px;
+    }
+    
+    #teapot {
+        width: 263px;
+        height: 287px;
+    }
+
+    #cups {
+        width: 185px;
+        height: 290px;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 12%;
+        padding-bottom: 7%;
+    }
+
+    .feature p {
+        margin-bottom: 50px;
+    }
+    
+    .post-images {
+        padding: 0 10%;
+    }
+
+    #post {
+        width: 355px;
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__text {
+        padding: 20% 15%;
+    }
+
+    .week__products {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .week__product {
+        padding: 0 3%;
+        margin-bottom: 40px;
+    }
+
+    .week__product img{
+        width: 285px;
+        height: 355px;
+    }
+
+    .week__product:last-child {
+        padding-left: 29%;
+    }
+
+    .main__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20%;
+    }
+
+    .square-background {
+        width: 430px;
+        height: 625px;
+        margin-top: 30%;
+        margin-left: 3%;
+    }
+
+    .right-part {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20%;
+    }
+
+    #green-chair {
+        width: 403px;
+        height: 595px;
+        left: -20%;
+        top: 12%;
+    }
+
+    #egg {
+        position: absolute;
+        width: 255px;
+        height: 225px;
+        left: 130%;
+        margin-top: 25%;
+    }
+
+    .second-right-part {
+        text-align: center;
+        padding: 185px 0px 0px 18%;
+        position: relative;
+    }
+
+    #black-lamp {
+        width: 410px;
+        height: 550px;
+        margin: 5% 0 0 10%;
+    }
+
+    #mesh-chair {
+        width: 260px;
+        height: 243px;
+        right: 6%;
+        margin-top: 40%;
+    }
+
+    .second-right-part {
+        /* padding: 90px; */
+        padding: 25% 0;
+    }
+    
+    .third-left-part {
+        width: 100%;
+        padding: 10% 0 15%;
+    }
+
+    #teapot {
+        width: 495px;
+        height: 540px;
+        left: -35%;
+        margin-top: 20%;
+    }
+
+    #cups {
+        width: 230px;
+        height: 365px;
+        right: -110%;
+        margin-bottom: -15%;
+    }
+
+    .express {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15%;
+        margin-bottom: 15%;
+        height: 260px;
+    }
+
+    .express h2 {
+        margin-top: 40px;
+    }
+
+    .express button {
+        margin-bottom: 40px;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 8%;
+        padding-bottom: 7%;
+    }
+
+    .feature p {
+        margin-bottom: 40px;
+    }
+    
+    .post-images {
+        padding: 0 10%;
+    }
+
+    #post {
+        width: 270px;
+        height: 185px;
+    }
+
+    .post-images h3 {
+        font-size: 18px;
+    }
 }

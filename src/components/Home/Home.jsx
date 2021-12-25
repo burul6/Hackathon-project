@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import Header from "../Header/Header";
 
-import { Carousel } from "antd";
 import {
   RightOutlined,
   ShoppingOutlined,
@@ -252,9 +251,6 @@ const Home = () => {
           </div>
         </section>
 
-        <div className="review-carousel">
-          
-        </div>
       </div>
     </div>
   );

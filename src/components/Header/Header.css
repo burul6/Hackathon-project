@@ -32,6 +32,10 @@
     color: black;
   }
 
+.ant-dropdown-link {
+    display: none;
+}
+
 .nav__icons {
     font-size: 1.4rem;
 }
@@ -51,4 +55,15 @@
     font-size: 16px;
     border: 1px solid #fff;
     border-radius: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav__item {
+        display: none;
+    }
+
+    .ant-dropdown-link {
+        display: block;
+    }
+
 }
