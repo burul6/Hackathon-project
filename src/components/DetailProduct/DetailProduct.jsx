@@ -10,10 +10,9 @@ import { HeartOutlined } from "@ant-design/icons";
 import Rating from "@mui/material/Rating";
 
 import "./DetailProduct.css";
-import { cartContext } from "../../contexts/cartContext";
-import { favoriteContext } from "../../contexts/favoriteContext";
 import Comments from "../Comments/Comments";
 import Reviews from "../Reviews/Reviews";
+import Header from "../Header/SecondHeader";
 
 const DetailProduct = () => {
 
@@ -42,6 +41,7 @@ const DetailProduct = () => {
     <div>
       {product ? (
         <>
+        <Header />
           <BreadCrumb />
           <div className="detail-product">
             <div className="product-gallery">

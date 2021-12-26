@@ -8,12 +8,13 @@ import DetailProduct from "./components/DetailProduct/DetailProduct";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import ProductList from "./components/ProductList/ProductList";
-import AdminPage from "./components/AdminPage/AdminPage";
 import EditProduct from "./components/EditProduct/EditProduct";
 import ProductCart from "./components/Cart/ProductCart";
 import Favorite from "./components/Favorite/Favorite";
 import Comments from "./components/Comments/Comments";
 import Reviews from "./components/Reviews/Reviews";
+import Contacts from "./components/Contacts/Contacts";
+import AdminPage from "./components/AdminPage/AdminPage";
 
 const Routing = () => {
   const PUBLIC_ROUTES = [
@@ -57,12 +58,18 @@ const Routing = () => {
       element: <Reviews />,
       id: 8,
     },
+    {
+      link: "/contacts",
+      element: <Contacts />,
+      id: 9,
+    },
+    
   ];
 
   const ADMIN_ROUTES = [
     {
       link: "/admin",
-      element: <AdminPage /> ,
+      element: <AdminPage />,
       id: 1,
     },
     {

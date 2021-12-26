@@ -6,6 +6,7 @@ import { productsContext } from "../../contexts/productsContext";
 import Filters from "../Filters/Filters.jsx";
 import ProductCard from "./ProductCard";
 import BreadCrumb from "../BreadCrumb/BreadCrumb";
+import Header from "../Header/SecondHeader";
 
 import { Input, Pagination, Empty } from "antd";
 
@@ -53,6 +54,7 @@ const ProductsList = () => {
   
   return (
     <>
+    <Header />
       <BreadCrumb />
     <div className="container">
       <div className="products-search">

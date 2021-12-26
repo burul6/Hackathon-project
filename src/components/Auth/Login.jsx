@@ -1,6 +1,7 @@
 import React from "react";
 
 import { useAuth } from "../../contexts/authContext";
+import Header from "../Header/SecondHeader";
 
 import "./Login.css";
 
@@ -20,6 +21,7 @@ const Login = () => {
   
   return (
     <>
+    <Header />
       <section className="login">
         <div className="login-container">
           <label className="auth-label">Email</label>

@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import { List, Avatar, Pagination } from "antd";
 import { Link, useSearchParams } from "react-router-dom";
 
 import { productsContext } from "../../contexts/productsContext";
 
-const AdminProductsList = () => {
+import { List, Avatar, Pagination } from "antd";
+import { DeleteOutlined, EditOutlined, MoreOutlined  } from "@ant-design/icons";
+
+const AdminProductList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { getProducts, deleteProduct, products, productsTotalCount } =
     useContext(productsContext);
@@ -47,17 +49,17 @@ const AdminProductsList = () => {
                 key="list-loadmore-edit"
                 onClick={() => deleteProduct(item.id)}
               >
-                delete
+                <DeleteOutlined style={{ color: "#000", fontSize: "20px"}} />
               </a>,
-              <Link to={`/edit/${item.id}`}>edit</Link>,
-              <Link to={`/shop/${item.id}`}>more</Link>,
+              <Link to={`/edit/${item.id}`}><EditOutlined style={{ color: "#000", fontSize: "20px"}} /></Link>,
+              <Link to={`/shop/${item.id}`}><MoreOutlined style={{ color: "#000", fontSize: "20px"}} /></Link>,
             ]}
           >
             <List.Item.Meta
               avatar={<Avatar src={item.image1} />}
               title={
                 <a>
-                  {item.brand}, {item.model}
+                  {item.title}
                 </a>
               }
             />
@@ -78,4 +80,4 @@ const AdminProductsList = () => {
   );
 };
 
-export default AdminProductsList;
+export default AdminProductList;

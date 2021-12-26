@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 
 import { favoriteContext } from "../../contexts/favoriteContext";
 import FavItem from "./FavItem";
+import Header from "../Header/SecondHeader";
 
 import { List } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
@@ -16,6 +17,7 @@ const Favorite = () => {
 
   return (
     <div>
+      <Header />
             <section style={{marginBottom:"50px", marginTop: "50px"}}>
                 <div style={{marginLeft:"50px"}}>
                     <h1 className="shopping-cart" style={{fontSize:"42px", fontWeight:"600", marginLeft:"50px", 

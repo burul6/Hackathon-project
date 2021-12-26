@@ -8,6 +8,7 @@ import CartItem from "./CartItem";
 import { List } from "antd";
 
 import "./ProductCart.css";
+import Header from "../Header/SecondHeader";
 
 const ProductCart = () => {
     const { cart, getCart } = useContext(cartContext);
@@ -17,6 +18,7 @@ const ProductCart = () => {
 
   return (
     <div className="cart-page">
+      <Header />
       <div
         className="cart-banner"
         style={{
