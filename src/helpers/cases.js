@@ -2,3 +2,7 @@ export const CASE_GET_PRODUCTS = "GET_PRODUCTS";
 export const CASE_GET_ONE_PRODUCT = "GET_ONE_PRODUCT";
 
 export const CASE_GET_CART = 'GET_CART';
+export const CASE_GET_FAV = "GET_FAV" ;
+
+export const CASE_GET_COMMENTS = "CASE_GET_COMMENTS";
+export const CASE_GET_ONE_COMMENT = "CASE_GET_ONE_COMMENT";

@@ -7,6 +7,7 @@ import { Image } from "antd";
 import Rating from "@mui/material/Rating";
 
 import "./ProductCard.css";
+import { favoriteContext } from "../../contexts/favoriteContext";
 
 const ProductCard = ({ item }) => {
   const { addProductToCart, checkItemInCart } = useContext(cartContext);
@@ -14,6 +15,14 @@ const ProductCard = ({ item }) => {
   useEffect(() => {
     setCheckInCart(checkItemInCart(item.id));
   });
+
+  const { addProductToFav, checkItemInFav } = useContext(favoriteContext);
+  const [checkInFav, setCheckInFav] = useState(checkItemInFav(item.id));
+
+  useEffect(() => {
+    setCheckInFav(setCheckInFav(item.id));
+  }, []);
+
   return (
     <div>
       <div className="cards">
@@ -29,18 +38,28 @@ const ProductCard = ({ item }) => {
             size="small"
           />
           <span>{"$" + item.price}</span>
-          <button
-            style={{
-              background: checkInCart ? "#93c4f5" : "black",
-              color: "#fff",
-            }}
-            onClick={() => {
-              addProductToCart(item);
-              setCheckInCart(checkItemInCart(item.id));
-            }}
-          >
-            Add to cart
-          </button>
+          <div>
+            <button
+              style={{
+                background: checkInCart ? "#93c4f5" : "black",
+                color: "#fff",
+              }}
+              onClick={() => {
+                addProductToCart(item);
+                setCheckInCart(checkItemInCart(item.id));
+              }}
+            >
+              Add to cart
+            </button>
+            <button
+              style={{ background: checkInFav ? "#93c4f5" : "black", marginLeft: "15px"}}
+              onClick={() => (
+                addProductToFav(item), setCheckInFav(checkItemInFav(item.id))
+              )}
+            >
+              Add to wishlist
+            </button>
+          </div>
         </div>
       </div>
     </div>

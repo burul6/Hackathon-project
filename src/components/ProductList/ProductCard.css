@@ -28,12 +28,6 @@
     background-color: #000;
 }
 
-.product-card button:hover {
-    color: #000;
-    background-color: transparent;
-    border: 1px solid #000;
-    cursor: pointer;
-}
 
 .product-card span {
     margin: 3px 0;

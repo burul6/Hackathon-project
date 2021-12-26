@@ -11,9 +11,12 @@ import ProductList from "./components/ProductList/ProductList";
 import AdminPage from "./components/AdminPage/AdminPage";
 import EditProduct from "./components/EditProduct/EditProduct";
 import ProductCart from "./components/Cart/ProductCart";
+import Favorite from "./components/Favorite/Favorite";
+import Comments from "./components/Comments/Comments";
+import Reviews from "./components/Reviews/Reviews";
 
 const Routing = () => {
-  let PUBLIC_ROUTES = [
+  const PUBLIC_ROUTES = [
     {
       link: "/",
       element: <Home />,
@@ -39,18 +42,33 @@ const Routing = () => {
       element: <ProductCart /> ,
       id: 5,
     },
+    {
+      link: "/favorite",
+      element: <Favorite /> ,
+      id: 6,
+    },
+    {
+      link: "/comments",
+      element: <Comments />,
+      id: 7,
+    },
+    {
+      link: "/reviews",
+      element: <Reviews />,
+      id: 8,
+    },
   ];
 
   const ADMIN_ROUTES = [
     {
       link: "/admin",
       element: <AdminPage /> ,
-      id: 5,
+      id: 1,
     },
     {
       link: "/edit/:id",
       element: <EditProduct />,
-      id: 6,
+      id: 2,
     },
   ];
 

@@ -13,6 +13,7 @@ import {
 } from "@ant-design/icons";
 
 import "./Header.css";
+import { favoriteContext } from "../../contexts/favoriteContext";
 
 const Header = () => {
   const location = useLocation();
@@ -21,9 +22,14 @@ const Header = () => {
     user: { email },
   } = useAuth();
 
-  const { getCart, cartLenght } = useContext(cartContext);
+  const { getCart, cartLength } = useContext(cartContext);
   useEffect(() => {
     getCart()
+  }, []);
+
+  const { getFav, fav, favLength } = useContext(favoriteContext);
+  useEffect(() => {
+    getFav();
   }, []);
 
   const menu = (
@@ -65,6 +71,9 @@ const Header = () => {
         <Link to="/contacts" className="nav__item">
           <li>Contacts</li>
         </Link>
+        <Link to="/reviews" className="nav__item">
+          <li>Reviews</li>
+        </Link>
 
         {email === "burul.baktybekova05@gmail.com" ? (
           <Link
@@ -79,14 +88,14 @@ const Header = () => {
 
         <div className="nav__icons">
           <Link to="/cart">
-            <Badge count={+cartLenght} size={"small"}>
+            <Badge count={+cartLength} size={"small"}>
               <ShoppingOutlined
                 style={{ color: "#fff", paddingLeft: "15px", fontSize: "25px" }}
               />
             </Badge>
           </Link>
           <Link to="/favorite">
-            <Badge count={5} size={"small"}>
+            <Badge count={+favLength} size={"small"}>
               <HeartOutlined
                 style={{ color: "#fff", paddingLeft: "30px", fontSize: "25px" }}
               />
