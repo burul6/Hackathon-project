@@ -63,20 +63,20 @@ const Routing = () => {
       element: <Contacts />,
       id: 9,
     },
-    
-  ];
-
-  const ADMIN_ROUTES = [
     {
       link: "/admin",
       element: <AdminPage />,
-      id: 1,
+      id: 10,
     },
     {
       link: "/edit/:id",
       element: <EditProduct />,
-      id: 2,
+      id: 11,
     },
+  ];
+
+  const ADMIN_ROUTES = [
+    
   ];
 
   const { user } = useAuth;

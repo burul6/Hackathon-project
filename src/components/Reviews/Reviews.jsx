@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Comment, Tooltip, Avatar, Button, TextArea } from "antd";
 import { commentsContext } from "../../contexts/commentsContext";
 import Header from "../Header/SecondHeader";
+import Comments from "../Comments/Comments";
 
 const Reviews = () => {
   const { getComments, comments, commentsTotalCount } =
@@ -14,7 +15,7 @@ const Reviews = () => {
   return (
     <>
     <Header />
-      comment
+      <Comments />
       {comments.map((item) => {
         <div className="new-comment" style={{ marginTop: "50px" }}>
           <div style={{ display: "flex", width: "80%" }}>

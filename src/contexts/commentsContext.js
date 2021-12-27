@@ -22,21 +22,21 @@ const reducer = (state = INIT_STATE, action) => {
   const CommentsContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  async function createComment(newComment, productId ,email) {
+  async function createComment(newComment, commentId ,email) {
     await axios.post(COMMENTS_API, newComment);
-    getComments(productId);
+    getComments(commentId);
   }
-  async function getComments(productId) {
-    let result = await axios.get(COMMENTS_API + `/?productId=${productId}`);
+  async function getComments(commentId) {
+    let result = await axios.get(COMMENTS_API + `/?commentId=${commentId}`);
     dispatch({
       type: CASE_GET_COMMENTS,
       payload: result,
     });
   }
 
-  async function deleteComment(id, productId) {
+  async function deleteComment(id, commentId) {
     await axios.delete(`${COMMENTS_API}/${id}`);
-    getComments(productId);
+    getComments(commentId);
   }
  
     return (

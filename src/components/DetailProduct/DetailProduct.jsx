@@ -93,7 +93,7 @@ const DetailProduct = () => {
                     <p>{product.description}</p>
                   </TabPane>
                   <TabPane tab="Reviews" key="3"></TabPane>
-                  {/* <Reviews /> */}
+                  <Reviews />
                 </Tabs>
               </div>
             </div>

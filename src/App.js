@@ -14,11 +14,14 @@ import Routing from "./Routing";
 import "antd/dist/antd.css";
 import "./App.css";
 import FavContextProvider from "./contexts/favoriteContext";
+import CommentsContextProvider from "./contexts/commentsContext";
 
 const App = () => {
   return (
     <div>
       <AuthContextProvider>
+        <CommentsContextProvider>
+
         <FavContextProvider>
 
         <CartContextProvider>
@@ -32,6 +35,7 @@ const App = () => {
           </ProductsContextProvider>
         </CartContextProvider>
         </FavContextProvider>
+        </CommentsContextProvider>
       </AuthContextProvider>
     </div>
   );
